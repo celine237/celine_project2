@@ -1,0 +1,947 @@
+body {
+    margin: 20;
+    font-family: Arial, sans-serif;
+  }
+  
+  .top-bar {
+    background-color: #333;
+    color: rgb(65, 64, 64);
+    padding: 5px 5px;
+    display: flex;
+    padding-left: 950px;
+    align-items: center;
+  }
+  
+  .top-bar a {
+    color: white;
+    margin-left: 10px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+  
+  .main-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+    background-color: white;
+    border-bottom: 1px solid #eee;
+  }
+  
+  .logo {
+    display: flex;
+    align-items: center;
+  }
+  .logo img {
+    height: 100px;
+    margin-right: 10px;
+  }
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 05px;
+    margin: 0;
+    padding: 0;
+  }
+  .nav-links a {
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+  }
+  .nav-links .active {
+    color: #ff6e5a; 
+  }
+  .nav-links .cta {
+    border: 4px solid #f8aea4;
+    color: #ff6e5a;
+    padding: 3px 3px;
+    border-radius: 2px;
+    font-weight:100;
+  }
+
+
+ h1{
+  color: #Ec5242;
+  font-size: 100px;
+  padding: 50px;
+  margin-top: 0.5px;
+}
+.main-program-section {
+    padding: 20px 20px;
+    text-align: center;
+    width: 100%;
+    max-width: 1200px; /* Limit the max width of the content */
+    box-sizing: border-box; 
+    font-family: 'Open Sans', sans-serif; /* Or a similar clean sans-serif font */
+    background-color: #212121; /* Dark background color */
+    color: #f0f0f0; 
+    justify-content: center; 
+}
+.section-title {
+  font-size: 2.5em;
+  font-weight: 600;
+  color: #ffffff; 
+  margin-bottom: 50px;
+  display: inline-block; 
+  padding-bottom: 8px; 
+  border-bottom: 2px solid orangered;
+}
+.program-cards-container {
+  display: flex;
+  justify-content: center; 
+  gap: 10px; 
+  margin-bottom: 40px;
+}
+
+.program-card {
+  background-color: #333333; 
+  border: 4px solid #444444; 
+  border-radius: 8px;
+  padding: 20px 15px;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2); 
+  transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out, border-color 0.2s ease-in-out; 
+}
+
+.program-card:hover {
+  transform: translateY(-5px); 
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+/* Card Icon */
+.card-icon {
+  font-size: 2.5em;
+  color: tomato; 
+  margin-bottom: 15px;
+}
+
+/* Card Title */
+.card-title {
+  font-size: 1.2em;
+  font-weight: 700;
+  color: red; 
+  margin-bottom: 5px;
+}
+
+/* Card Description */
+.card-description {
+  font-size: 0.9em;
+  color: #fdfbfb;
+  line-height: 1.5;
+  flex-grow: 1; 
+}
+
+/* "SEE THE WHOLE PROGRAM" Link */
+.full-program-link-container {
+  margin-top: 30px;
+}
+
+.full-program-link {
+  text-decoration: none; 
+  color: #999999; 
+  font-size: 1em;
+  font-weight: 600;
+  letter-spacing: 1px;
+  padding-bottom: 3px;
+  border-bottom: 1px solid #999999; 
+  transition: color 0.2s ease-in-out, border-color 0.2s ease-in-out;
+}
+
+.full-program-link:hover {
+  color: #ffffff;
+  border-color: #ffffff; 
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1100px) {
+  .program-card {
+      width: 180px; 
+  }
+}
+
+@media (max-width: 900px) {
+  .program-card {
+      width: 160px; 
+      padding: 20px 10px;
+  }
+  .card-icon {
+      font-size: 2em;
+  }
+  .card-title {
+      font-size: 1.1em;
+  }
+  .card-description {
+      font-size: 0.85em;
+  }
+  .section-title {
+      font-size: 2em;
+  }
+}
+@media (max-width: 768px) {
+  .program-cards-container {
+      flex-direction: column; 
+      align-items: center; 
+  }
+  .program-card {
+      width: 80%;
+      max-width: 300px; 
+  }
+  .section-title {
+      font-size: 1.8em;
+  }
+}
+/* FEATURED SPEAKERS SECTION */
+.speakers-section {
+  padding: 50px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+.speakers-section h2 {
+  font-size: 32px;
+  position: relative;
+  margin-bottom: 40px;
+}
+.speakers-section h2::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: red;
+  margin: 10px auto 0;
+}
+/* Speaker grid */
+.speakers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: left;
+}
+/* Speaker card */
+.speaker-card {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+.speaker-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 5px;
+  object-fit: cover;
+  background-color: #ccc;
+}
+.speaker-info h3 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: bold;
+}
+.speaker-info .title {
+  color: red;
+  font-size: 14px;
+  margin: 5px 0;
+}
+.speaker-info .desc {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+}
+/* PARTNER SECTION */
+.partner-section {
+  background-color: #2c2c2c;
+  padding: 40px 20px;
+  text-align: center;
+  color: #fff;
+}
+.partner-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  position: relative;
+  display: inline-block;
+}
+.partner-section h2::after {
+  content: "";
+  display: block;
+  width: 30px;
+  height: 2px;
+  background-color: red;
+  margin: 8px auto 0;
+}
+.partner-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+.partner-logos img {
+  height: 30px;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+.partner-logos img:hover {
+  opacity: 1;
+}
+/*--About page--*/
+.content-wrapper{
+  text-align: center;
+  max-width: 900;
+  width: 100%;
+  padding: 20PX;
+}
+.Main-title {
+padding: 30px;
+}
+.title-underline-short{
+  border: none;
+  border-top: 3px solid #FF6600;
+  width:60px;
+  margin-top: 5px;
+  margin-bottom:20px;
+}
+.description-box1{
+
+  background-color: rgba(251, 246, 246, 0.8); /* Slightly transparent white */
+  border: 2px solid #424141; /* Orange left border */
+  padding: 50px;
+  margin-top: 30px;
+  width: 60%; /* Adjust width as needed */
+  max-width: 700px; /* Or a fixed pixel width */
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.08); /* Subtle shadow */
+  text-align: justify; /* Justify text for a clean block */
+  line-height: 1.5;
+}
+.description-box1 p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.90em;
+  color: #555; /* Dark grey */
+  margin-bottom: 1em
+}
+.contact-email {
+  margin-top: 20px;
+  text-align: center; /* Center the contact text and link */
+}
+
+.contact-email p {
+  font-size: 0.9em;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.email-link {
+  font-size: 1.1em;
+  color: #FF6600; 
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s ease-in-out;
+}
+.email-link:hover {
+  color: #1c6ae8; 
+}
+.event-details {
+  margin-top: 50px;
+}
+.event-details .date {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.6em;
+  font-weight: 700;
+  color: #333; 
+  margin-bottom: 0.5em;
+}
+.event-details .location {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  color: #666; 
+}
+
+.logo-section {
+  background-color: #ffffff; /* White background */
+  padding: 10px 5px; /* Padding top/bottom, sides */
+  text-align: center;
+  color: #333; /* Default text color */
+}
+
+.logo-section-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #333; /* Dark grey color */
+  margin-bottom: 1px; /* Space between title and underline */
+}
+
+.logo-title-underline {
+  border: none;
+  border-top: 2px solid #ff6600; /* Red underline */
+  width: 60px; /* Short length */
+  margin: 0 auto 40px auto; /* Center the underline and add space below */
+}
+
+.logo-description {
+  font-family: 'Open Sans', sans-serif;
+  font-size:1em;
+  color: #555; 
+  max-width: 700px; 
+  margin: 0 auto 50px auto; 
+  line-height: 1;
+}
+.logo-image-container {
+  display: flex;
+  justify-content: center; /* Center the image horizontally */
+  align-items: center;
+  padding: 20px;
+}
+
+.summit-logo-image {
+  max-width: 100%; /* Ensure image is responsive */
+  height: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Subtle shadow around the logo image */
+  border: 1px solid #eee; 
+}
+
+/* --- Media Queries for Logo Section Responsiveness --- */
+@media (max-width: 900px) {
+  .logo-section-title {
+      font-size: 1.8em;
+  }
+  .logo-description {
+      font-size: 0.9em;
+      max-width: 90%;
+  }
+  .summit-logo-image {
+      max-width: 80%; /* Adjust logo size on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .logo-section {
+      padding: 50px 15px;
+  }
+  .logo-section-title {
+      font-size: 1.5em;
+  }
+  .logo-description {
+      font-size: 0.85em;
+  }
+  .logo-title-underline {
+      margin-bottom: 30px;
+  }
+}/* summits codes*/
+
+.past-summits-section {
+  background-color: #f8f8f8; 
+  padding: 80px 20px;
+  text-align: center;
+  color: #333;
+}
+
+.past-summits-title {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 2.2em;
+  font-weight: 600;
+  color: #4a4848;
+  margin-bottom: 10px;
+}
+
+.past-summits-subtitle {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 0.95em;
+  color: #777;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+}
+
+.summit-cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px; 
+  flex-wrap: wrap; 
+  max-width: 900px; 
+  margin: 0 auto;
+}
+
+.summit-card {
+  position: relative;
+  width: 400px; 
+  height: 250px; 
+  overflow: hidden;
+  border-radius: 8px; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0.0, 0.1); /* Subtle shadow */
+  flex-shrink: 0; 
+  transition: transform 0.3s ease-in-out;
+}
+
+.summit-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.summit-card-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  transition: transform 0.3s ease-in-out;
+}
+
+.summit-card:hover .summit-card-image {
+  transform: scale(1.05);
+}
+
+.summit-card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 102, 0, 0.7);
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+  transition: background-color 0.3s ease-in-out;
+}
+.summit-year {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 3.5em;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.summit-location {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 1.1em;
+  font-weight: 600;
+}
+
+/* --- Footer Section Styles --- */
+.main-footer {
+  background-color: #212121; 
+  color: #b0b0b0;
+  padding: 40px 20px;
+  font-size: 0.85em;
+  line-height: 1.5;
+  text-align: center; 
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center;
+  align-items: center; 
+  max-width: 900px; 
+  margin: 0 auto;
+  gap: 30px; 
+}
+
+.footer-logo img {
+  height: 40px; 
+  width: auto;
+  flex-shrink: 0; 
+}
+
+.footer-text {
+  text-align: left; 
+}
+
+.footer-text p {
+  margin-bottom: 0.5em; 
+}
+
+.footer-text .copyright {
+  color: #d0d0d0; 
+  font-weight: 600;
+}
+
+.footer-text .legal-notice a {
+  color: #ffffff; 
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
+}
+
+.footer-text .legal-notice a:hover {
+  color: #ff6600; 
+}
+
+/* --- Media Queries for Past Summits & Footer Responsiveness --- */
+@media (max-width: 900px) {
+  .summit-cards-container {
+      gap: 20px;
+  }
+  .summit-card {
+      width: 350px;
+      height: 220px;
+  }
+  .summit-year {
+      font-size: 3em;
+  }
+  .summit-location {
+      font-size: 1em;
+  }
+  .footer-content {
+      flex-direction: column; 
+      gap: 20px;
+  }
+  .footer-logo {
+      margin-bottom: 10px;
+  }
+  .footer-text {
+      text-align: center; 
+  }
+}
+
+@media (max-width: 768px) {
+  .past-summits-title {
+      font-size: 1.8em;
+  }
+  .past-summits-subtitle {
+      font-size: 0.9em;
+  }
+  .summit-cards-container {
+      flex-direction: column; 
+      align-items: center;
+  }
+  .summit-card {
+      width: 90%; 
+      max-width: 400px;
+      height: 200px;
+  }
+}
+
+@media (max-width: 480px) {
+  .past-summits-section {
+      padding: 60px 15px;
+  }
+  .past-summits-title {
+      font-size: 1.6em;
+  }
+  .past-summits-subtitle {
+      font-size: 0.85em;
+  }
+  .summit-year {
+      font-size: 2.8em;
+  }
+  .summit-location {
+      font-size: 0.9em;
+  }
+  .main-footer {
+      padding: 30px 15px;
+  }
+  .footer-text {
+      font-size: 0.8em;
+  }
+}
+
+.card {
+  background-color: rgb(254, 149, 107); /* White background for the cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(248, 3, 3, 0.1);
+  padding: 20px;
+  width: 15px; /* Fixed width for the cards */
+  box-sizing: border-box;
+  
+}
+/*contact styling*/
+/* === Layout for Both Cards Side by Side === */
+.card-wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  flex: 1;
+  background-color: #ff8a65;
+  border-radius: 10px;
+  padding: 30px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  min-width: 300px;
+}
+
+/* === Contact Form Container Styles === */
+.contact-form-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #300a0a;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+
+.contact-form-container p {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.contact-info-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact-info-item svg {
+  margin-right: 10px;
+  color: #558B2F;
+  width: 18px;
+  height: 18px;
+}
+
+.contact-info-item span {
+  display: flex;
+}
+
+.contact-info-item .label {
+  font-weight: 600;
+  margin-right: 5px;
+}
+
+/* === Contact Form Inputs & Button === */
+.contact-form-container form label {
+  display: block;
+  font-size: 13px;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.contact-form-container form input[type="text"],
+.contact-form-container form input[type="email"],
+.contact-form-container form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 15px;
+  border: 2px solid #f33232;
+  border-radius: 5px;
+  font-size: 14px;
+  box-sizing: border-box;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.contact-form-container form textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.contact-form-container form button {
+  display: block;
+  margin: 0 auto;
+  background-color: orangered;
+  color: white;
+  padding: 10px 80px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form-container form button:hover {
+  background-color: #ef6705;
+}
+
+/* === Success Message Container Styles === */
+.success-message-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 450px;
+}
+
+.success-message-container h2 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  color: #333;
+  font-size: 26px;
+  line-height: 1.4;
+  margin-bottom: 40px;
+}
+
+.success-message-container button {
+  background-color: #ef6705;
+  color: white;
+  padding: 10px 80px;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.success-message-container button:hover {
+  background-color: #ec3705;
+}
+
+/* === Responsive Design === */
+@media (max-width: 850px) {
+  .card-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 95%;
+    max-width: 480px;
+  }
+
+  .contact-form-container h2,
+  .success-message-container h2 {
+    font-size: 20px;
+  }
+
+  .contact-info-item {
+    font-size: 13px;
+  }
+
+  .contact-form-container form button,
+  .success-message-container button {
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: 16px;
+  }
+}
+.home {
+  background-image: url("mogah 44.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px 20px;
+  text-align: center;
+  color: white;
+  position: relative;
+}
+/*home page tittle*/
+.PROGRAM {
+  background-image: url("mogah 22.jpg")
+  background-size: cover;
+  background-position: center;
+  padding: 100px 60px;
+  position: relative;
+  min-height: 100vh;
+}
+
+.PROGRAM::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* Light overlay */
+  z-index: 1;
+}
+
+.PROGRAM > * {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  text-align: left;
+  margin-left: 5%;
+}
+
+.intro-text {
+  font-size: 24px;
+  color: #e24e1b;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.pro-title {
+  font-size: 60px;
+  font-weight: 900;
+  margin: 0 0 30px 0;
+  line-height: 1.2;
+  color: #000;
+}
+
+.pro-title .gradient-text {
+  background: linear-gradient(to right, #cc0000, #ff6600);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.pro-title .year {
+  font-size: 40px;
+  color: #555;
+}
+
+.description {
+  background-color: #fff;
+  padding: 20px 30px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 600px;
+}
+
+.date {
+  font-size: 20px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.date br + span {
+  font-weight: normal;
+  font-size: 16px;
+  color: #555;
+}
+/*contact footer*/
+.footer {
+  background-color: #1e2125;
+  color: #fff;
+  text-align: center;
+  padding: 30px 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.footer .connect p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+.social-links a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #4db8ff;
+}
+
+.footer i {
+  font-size: 1.3em;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .social-links {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
